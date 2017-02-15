@@ -17,13 +17,13 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 
 وراها ⤵️
 
-git clone https://github.com/ibr773/TPBOT.git
+git clone https://github.com/aymanhaider/Demonic_bot.git
 
 🔺-----------------------------------------------🔻
 
 وراها ⤵️
 
-cd TPBOT
+cd Demonic_bot
 
 🔺-----------------------------------------------🔻
 
@@ -53,5 +53,5 @@ redis-server
 
 🔺-----------------------------------------------🔻
 
--Dev kasper TP (BY @kasper_dev )
--TP TEAM @Dev_kasper
+-Dev Demonic bot (BY @aymanwasfe1 )
+-TP TEAM @Ol56lO_dev
