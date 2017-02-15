@@ -1,17 +1,12 @@
 --[[
- _____ ____     ____   ___ _____ 
-|_   _|  _ \   | __ ) / _ \_   _|
-  | | | |_) |  |  _ \| | | || |  
-  | | |  __/   | |_) | |_| || |  
-  |_| |_|      |____/ \___/ |_|  
+     ____   ___ _____ 
+    | __ ) / _ \_   _|
+    |  _ \| | | || |  
+    | |_) | |_| || |  
+    |____/ \___/ |_| 
                                  
-KASPER  TP (BY @kasper_dev)
- _  __    _    ____  ____  _____ ____     _____ ____  
-| |/ /   / \  / ___||  _ \| ____|  _ \   |_   _|  _ \ 
-| ' /   / _ \ \___ \| |_) |  _| | |_) |    | | | |_) |
-| . \  / ___ \ ___) |  __/| |___|  _ <     | | |  __/ 
-|_|\_\/_/   \_\____/|_|   |_____|_| \_\    |_| |_|    
-                                                      
+Demonic  bot (BY @Mostank_GT)
+
 --]]
 local function toaudio(msg, success, result) 
   local receiver = get_receiver(msg) 
@@ -36,7 +31,7 @@ local function run(msg,matches)
         if redis:set("document:audio", "waiting") then 
         end 
        end 
-      if matches[1]:lower() == "audio" or matches[1]:lower() == "تحويل بصمه" then 
+      if matches[1]:lower() == "audio" or matches[1]:lower() == "صوت" then 
      redis:get("document:audio")  
     send_large_msg(receiver, '', ok_cb, false) 
         load_audio(msg.reply_id, toaudio, msg)  
@@ -46,23 +41,19 @@ end
 return { 
 patterns = { 
    "^[/#!](audio)$", 
-   "^(تحويل بصمه)$", 
+   "^(صوت)$", 
    "%[(audio)%]",  
  }, 
 run = run, 
 }
 --[[
- _____ ____     ____   ___ _____ 
-|_   _|  _ \   | __ ) / _ \_   _|
-  | | | |_) |  |  _ \| | | || |  
-  | | |  __/   | |_) | |_| || |  
-  |_| |_|      |____/ \___/ |_|  
+     ____   ___ _____ 
+    | __ ) / _ \_   _|
+    |  _ \| | | || |  
+    | |_) | |_| || |  
+    |____/ \___/ |_|
                                  
-KASPER  TP (BY @kasper_dev)
- _  __    _    ____  ____  _____ ____     _____ ____  
-| |/ /   / \  / ___||  _ \| ____|  _ \   |_   _|  _ \ 
-| ' /   / _ \ \___ \| |_) |  _| | |_) |    | | | |_) |
-| . \  / ___ \ ___) |  __/| |___|  _ <     | | |  __/ 
-|_|\_\/_/   \_\____/|_|   |_____|_| \_\    |_| |_|    
+Demonic  bot (BY @aymanwasfe1)
+
                                                       
 --]]
