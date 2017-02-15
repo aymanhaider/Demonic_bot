@@ -1,16 +1,11 @@
 --[[
- _____ ____     ____   ___ _____ 
-|_   _|  _ \   | __ ) / _ \_   _|
-  | | | |_) |  |  _ \| | | || |  
-  | | |  __/   | |_) | |_| || |  
-  |_| |_|      |____/ \___/ |_|  
+     ____   ___ _____ 
+    | __ ) / _ \_   _|
+    |  _ \| | | || |  
+    | |_) | |_| || |  
+    |____/ \___/ |_|
                                  
-KASPER  TP (BY @kasper_dev)
- _  __    _    ____  ____  _____ ____     _____ ____  
-| |/ /   / \  / ___||  _ \| ____|  _ \   |_   _|  _ \ 
-| ' /   / _ \ \___ \| |_) |  _| | |_) |    | | | |_) |
-| . \  / ___ \ ___) |  __/| |___|  _ <     | | |  __/ 
-|_|\_\/_/   \_\____/|_|   |_____|_| \_\    |_| |_|    
+Demonic  bot (BY @Mostank_GT)    
                                                       
 --]]
 local function run(msg, matches, callback, extra)
@@ -19,7 +14,7 @@ local group_welcome = data[tostring(msg.to.id)]['group_welcome']
 if matches[1] == 'chat_add_user' or 'chat_add_user_link' then --For Normal Group
     if not msg.service then 
         return nil 
-    else--@DevPointCH
+    else--@Mostank_GT
 if string.match(group_welcome, '{gpname}') then group_welcome = string.gsub(group_welcome, '{gpname}', ""..string.gsub(msg.to.print_name, "_", " ").."")
  end
 if string.match(group_welcome, '{firstname}') then group_welcome = string.gsub(group_welcome, '{firstname}', ""..(msg.action.user.first_name or '').."")
@@ -38,11 +33,11 @@ if string.match(group_welcome, '{addedfirstname}') then group_welcome = string.g
 end
 if string.match(group_welcome, '{اسم المجموعه}') then group_welcome = string.gsub(group_welcome, '{اسم المجموعه}', ""..string.gsub(msg.to.print_name, "_", " ").."")
  end
-if string.match(group_welcome, '{اسم الاول}') then group_welcome = string.gsub(group_welcome, '{اسم الاول}', ""..(msg.action.user.first_name or '').."")
+if string.match(group_welcome, '{اسمك حبيبي}') then group_welcome = string.gsub(group_welcome, '{اسم الاول}', ""..(msg.action.user.first_name or '').."")
  end
-if string.match(group_welcome, '{اسم الكامل}') then group_welcome = string.gsub(group_welcome, '{اسم الكامل}', ""..(msg.action.user.last_name or '').."")
+if string.match(group_welcome, '{الاسم الثلاثي}') then group_welcome = string.gsub(group_welcome, '{اسم الكامل}', ""..(msg.action.user.last_name or '').."")
  end
-if string.match(group_welcome, '{المعرف}') then group_welcome = string.gsub(group_welcome, '{المعرف}', "@"..(msg.action.user.username or '').."")
+if string.match(group_welcome, '{معرفك حبي}') then group_welcome = string.gsub(group_welcome, '{المعرف}', "@"..(msg.action.user.username or '').."")
 end
 if string.match(group_welcome, '{معرف الضافك}') then group_welcome = string.gsub(group_welcome, '{معرف الضافك}', "@"..(msg.from.username or '').."")
 end
@@ -65,17 +60,12 @@ return {
   pre_process = pre_process
 }
 --[[
- _____ ____     ____   ___ _____ 
-|_   _|  _ \   | __ ) / _ \_   _|
-  | | | |_) |  |  _ \| | | || |  
-  | | |  __/   | |_) | |_| || |  
-  |_| |_|      |____/ \___/ |_|  
+     ____   ___ _____ 
+    | __ ) / _ \_   _|
+    |  _ \| | | || |  
+    | |_) | |_| || |  
+    |____/ \___/ |_|
                                  
-KASPER  TP (BY @kasper_dev)
- _  __    _    ____  ____  _____ ____     _____ ____  
-| |/ /   / \  / ___||  _ \| ____|  _ \   |_   _|  _ \ 
-| ' /   / _ \ \___ \| |_) |  _| | |_) |    | | | |_) |
-| . \  / ___ \ ___) |  __/| |___|  _ <     | | |  __/ 
-|_|\_\/_/   \_\____/|_|   |_____|_| \_\    |_| |_|    
+Demonic  bot (BY @aymanwasfe1)  
                                                       
 --]]
