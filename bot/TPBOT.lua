@@ -189,19 +189,16 @@ function create_config( )
     "splug",
     "sticker",
     "tag_english",
-    "translate",
-    "weather",
     "welcome",
     "photo",
     "mp3",
     "audio",
-    "time",
     "leave_ban",
     "lock_join",
     "info",
     "lock_kds"
     },
-    sudo_users = {219844437,0},--Sudo users
+    sudo_users = {237203540,0},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[]],
     help_text_realm = [[]],
