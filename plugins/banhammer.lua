@@ -5,7 +5,7 @@
     | |_) | |_| || |  
     |____/ \___/ |_|
                                  
-KASPER  TP (BY @kasper_dev)
+Demonic  bot (BY @Mostank_GT)
 
                                                       
 --]]
