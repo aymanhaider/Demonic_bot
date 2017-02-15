@@ -53,5 +53,5 @@ redis-server
 
 🔺-----------------------------------------------🔻
 
--Dev Demonic bot (BY @aymanwasfe1 )
+-Dev Demonic bot (BY @Mostank_GT )
 -TP TEAM @Ol56lO_dev
