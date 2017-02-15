@@ -1,16 +1,12 @@
 --[[
- _____ ____     ____   ___ _____ 
-|_   _|  _ \   | __ ) / _ \_   _|
-  | | | |_) |  |  _ \| | | || |  
-  | | |  __/   | |_) | |_| || |  
-  |_| |_|      |____/ \___/ |_|  
+     ____   ___ _____ 
+    | __ ) / _ \_   _|
+    |  _ \| | | || |  
+    | |_) | |_| || |  
+    |____/ \___/ |_|
                                  
 KASPER  TP (BY @kasper_dev)
- _  __    _    ____  ____  _____ ____     _____ ____  
-| |/ /   / \  / ___||  _ \| ____|  _ \   |_   _|  _ \ 
-| ' /   / _ \ \___ \| |_) |  _| | |_) |    | | | |_) |
-| . \  / ___ \ ___) |  __/| |___|  _ <     | | |  __/ 
-|_|\_\/_/   \_\____/|_|   |_____|_| \_\    |_| |_|    
+
                                                       
 --]]
 local function pre_process(msg)
@@ -173,17 +169,17 @@ local function kick_ban_res(extra, success, result)
       local get_cmd = extra.get_cmd
        if get_cmd == "kick" then
          if member_id == from_id then
-            send_large_msg(receiver, "لـ{🖐🏿}ـا يـمـكـ(‼️)ـنـك طـ{👞}ـرد نـفـ(☯)ـسـك")
+            send_large_msg(receiver, "لا يمكنك {DEMONIC} طرد نفسك ")
 			return
          end
          if is_momod2(member_id, chat_id) and not is_admin2(sender) then
-            send_large_msg(receiver, "لـ{🖐🏿}ـا يـمـكـ(‼️)ـنـك طـ{👞}ـرد الـمـ(🏆)ـدراء")
+            send_large_msg(receiver, "لا يمكنك {DEMONIC} طرد المدراء")
 			return
          end
 		 kick_user(member_id, chat_id)
       elseif get_cmd == 'ban' then
         if is_momod2(member_id, chat_id) and not is_admin2(sender) then
-			send_large_msg(receiver, "لـ{🖐🏿}ـا يـمـكـ(‼️)ـنـك طـ{👞}ـرد الـمـ(🏆)ـدراء")
+			send_large_msg(receiver, "لا يمكنك {DEMONIC} طرد المدراء")
 			return
         end
         send_large_msg(receiver, 'تـ{✅}ـم حـضـ(🚷)ـر\n #user : @'..member..'\n #ID : '..member_id)
@@ -220,7 +216,7 @@ local text = "_🇮🇷 Group ID : _*"..msg.to.id.."*\n_🇮🇷 Group Name : _*
 send_api_msg(msg, get_receiver_api(msg), text, true, 'md')
 end
   end
-  if matches[1]:lower() == 'kkme' or matches[1]:lower() == 'اطردني' and msg.to.type == "chat" then-- /kickme
+  if matches[1]:lower() == 'kkme' or matches[1]:lower() == 'اشلفني' and msg.to.type == "chat" then-- /kickme
   local receiver = get_receiver(msg)
     if msg.to.type == 'chat' then
       local print_name = user_print_name(msg.from):gsub("‮", "")
@@ -333,11 +329,11 @@ end
          	return
         end
         if not is_admin1(msg) and is_momod2(matches[2], msg.to.id) then
-          	local text = 'لـ{🖐🏿}ـا يـمـكـ(‼️)ـنـك طـ{👞}ـرد الـمـ(🏆)ـدراء\nيـا '..(msg.from.first_name or "erorr")..'\n'
+          	local text = 'لا يمكنك {DEMONIC} طرد المدراء'..(msg.from.first_name or "erorr")..'\n'
 return reply_msg(msg.id, text, ok_cb, false)
         end
         if tonumber(matches[2]) == tonumber(msg.from.id) then
-          	local text = 'لـ{🖐🏿}ـا يـمـكـ(‼️)ـنـك طـ{👞}ـرد نـفـ(☯)ـسـك\nيـا '..(msg.from.first_name or "erorr")..'\n'
+          	local text = 'لا يمكنك {DEMONIC} طرد المدراء'..(msg.from.first_name or "erorr")..'\n'
 return reply_msg(msg.id, text, ok_cb, false)
         end
         local print_name = user_print_name(msg.from):gsub("‮", "")
@@ -370,11 +366,11 @@ return reply_msg(msg.id, text, ok_cb, false)
          	return
         end
         if not is_admin1(msg) and is_momod2(matches[2], msg.to.id) then
-          	local text = 'لـ{🖐🏿}ـا يـمـكـ(‼️)ـنـك طـ{👞}ـرد الـمـ(🏆)ـدراء\nيـا '..(msg.from.first_name or "erorr")..'\n'
+          	local text = ' لا يمكنك {DEMONIC} طرد المدراء '..(msg.from.first_name or "erorr")..'\n'
 return reply_msg(msg.id, text, ok_cb, false)
         end
         if tonumber(matches[2]) == tonumber(msg.from.id) then
-          	local text = 'لـ{🖐🏿}ـا يـمـكـ(‼️)ـنـك طـ{👞}ـرد نـفـ(☯)ـسـك\nيـا '..(msg.from.first_name or "erorr")..'\n'
+          	local text = 'ا يمكنك {DEMONIC} طرد نفسك'..(msg.from.first_name or "erorr")..'\n'
 return reply_msg(msg.id, text, ok_cb, false)
         end
         local print_name = user_print_name(msg.from):gsub("‮", "")
@@ -452,24 +448,20 @@ return {
 	  "^(الغاء الحظر)$",
 	  "^(طرد) (.*)$",
 	  "^(طرد)$",
-  	"^(اطردني)",
+  	"^(اشلفني)",
     "^!!tgservice (.+)$"
   },
   run = run,
   pre_process = pre_process
 }
 --[[
- _____ ____     ____   ___ _____ 
-|_   _|  _ \   | __ ) / _ \_   _|
-  | | | |_) |  |  _ \| | | || |  
-  | | |  __/   | |_) | |_| || |  
-  |_| |_|      |____/ \___/ |_|  
+     ____   ___ _____ 
+    | __ ) / _ \_   _|
+    |  _ \| | | || |  
+    | |_) | |_| || |  
+    |____/ \___/ |_|
                                  
-KASPER  TP (BY @kasper_dev)
- _  __    _    ____  ____  _____ ____     _____ ____  
-| |/ /   / \  / ___||  _ \| ____|  _ \   |_   _|  _ \ 
-| ' /   / _ \ \___ \| |_) |  _| | |_) |    | | | |_) |
-| . \  / ___ \ ___) |  __/| |___|  _ <     | | |  __/ 
-|_|\_\/_/   \_\____/|_|   |_____|_| \_\    |_| |_|    
+Demonic  bot (BY @aymanwasfe1)
+
                                                       
 --]]
